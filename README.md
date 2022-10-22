@@ -1,1 +1,1 @@
-# ReactJSCapstone_MOVIES_BC32E_LongandKhang
+# Huu-ThanhNhan_ReactJSCapstone_Movie

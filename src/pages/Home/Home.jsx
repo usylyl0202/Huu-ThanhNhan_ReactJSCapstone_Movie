@@ -4,8 +4,8 @@ import HomeMenu from './HomeMenu/HomeMenu'
 import { quanLyPhimReducer } from '../../redux/reducers'
 import Film from '../../components/Film/Film'
 import MultipleRowSlick from '../../components/ReactSlick/MultipleRowSlick'
-import { layDanhSachPhimAction } from '../../redux/actions/quanLyPhimAction'
-import { layDanhSachHeThongCumRapAcTion } from '../../redux/actions/quanLyRapAction'
+import { quanLyPhimAction } from '../../redux/actions/quanLyPhimAction'
+import { quanLyRapAction } from '../../redux/actions/quanLyRapAction'
 import HomeCarousel from '../../templates/HomeTemplate/Layout/HomeCarousel/HomeCarousel'
 
 const Home = () => {
@@ -21,9 +21,9 @@ const Home = () => {
   //   })
   // }
   useEffect(() => {
-    const action = layDanhSachPhimAction()
+    const action = quanLyPhimAction.layDanhSachPhimAction()
     dispath(action) // dispatch function từ redux THUNK
-    dispath(layDanhSachHeThongCumRapAcTion())
+    dispath(quanLyRapAction.layDanhSachHeThongCumRapAcTion())
   }, [])
 
   return (
@@ -40,7 +40,7 @@ const Home = () => {
       </section>
 
       <div className='mx-36'>
-        <HomeMenu hethongrapchieu={heThongRapChieu} />
+        <HomeMenu heThongRapChieu={heThongRapChieu} />
       </div>
 
     </div>
